@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { EmailField } from "../../components/EmailField";
-// import { FormLogRegLink } from "../../components/FormLogRegLink";
-// import { FormSubmitButton } from "../../components/FormSubmitButton";
-// import { PasswordField } from "../../components/PasswordField";
+import { FormLogRegLink } from "../../components/FormLogRegLink";
+import { FormSubmitButton } from "../../components/FormSubmitButton";
+import { PasswordField } from "../../components/PasswordField";
 import { TextInputField } from "../../components/TextInputField";
 import { commonStyles } from "../../styles/common";
 // import Icon from "react-native-vector-icons/AntDesign";
@@ -107,21 +107,20 @@ export const RegistrationScreen = ({
             onFocus={onInputFocus}
           />
 
-          {/* <PasswordField
+          <PasswordField
             value={password}
             onChangeText={setPassword}
             onFocus={onInputFocus}
-          /> */}
+          />
         </View>
 
-        {/* <FormSubmitButton
+        <FormSubmitButton
           title="Зарегистрироваться"
           onPress={onSubmitHandler}
-        /> */}
+        />
 
-        {/* <FormLogRegLink>Уже есть аккаунт? Войти</FormLogRegLink> */}
+        <FormLogRegLink>Уже есть аккаунт? Войти</FormLogRegLink>
       </View>
-      <Text>TEST</Text>
     </View>
   );
 };
