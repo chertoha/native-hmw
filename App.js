@@ -12,6 +12,7 @@ import {
 import { useCallback, useEffect, useState } from "react";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
+import { RegistrationScreen } from "./src/screens/RegistrationScreen/RegistrationScreen";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -67,11 +68,11 @@ export default function App() {
               keyboardShouldPersistTaps="handled"
               keyboardDismissMode="on-drag"
             >
-              {/* <RegistrationScreen
+              <RegistrationScreen
                 onInputFocus={onInputFocusHandler}
                 isKeyboardOpen={isKeyboardOpen}
                 closeKeyboard={closeKeyboard}
-              /> */}
+              />
 
               {/* <LoginScreen
                 onInputFocus={onInputFocusHandler}
