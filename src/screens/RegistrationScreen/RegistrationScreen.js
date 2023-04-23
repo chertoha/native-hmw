@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 // import { FormLogRegLink } from "../../components/FormLogRegLink";
 // import { FormSubmitButton } from "../../components/FormSubmitButton";
 // import { PasswordField } from "../../components/PasswordField";
-// import { TextInputField } from "../../components/TextInputField";
+import { TextInputField } from "../../components/TextInputField";
 import { commonStyles } from "../../styles/common";
 // import Icon from "react-native-vector-icons/AntDesign";
 // import * as ImagePicker from "expo-image-picker";
@@ -88,7 +88,7 @@ export const RegistrationScreen = ({
             style={image && { transform: [{ rotate: "45deg" }] }}
           />
         </TouchableOpacity>
-      </View>
+      </View> */}
 
       <View style={commonStyles.formWrapper}>
         <Text style={commonStyles.title}>Регистрация</Text>
@@ -101,26 +101,26 @@ export const RegistrationScreen = ({
             onChangeText={setLogin}
           />
 
-          <EmailField
+          {/* <EmailField
             value={email}
             onChangeText={setEmail}
             onFocus={onInputFocus}
-          />
+          /> */}
 
-          <PasswordField
+          {/* <PasswordField
             value={password}
             onChangeText={setPassword}
             onFocus={onInputFocus}
-          />
+          /> */}
         </View>
 
-        <FormSubmitButton
+        {/* <FormSubmitButton
           title="Зарегистрироваться"
           onPress={onSubmitHandler}
-        />
+        /> */}
 
-        <FormLogRegLink>Уже есть аккаунт? Войти</FormLogRegLink>
-      </View> */}
+        {/* <FormLogRegLink>Уже есть аккаунт? Войти</FormLogRegLink> */}
+      </View>
       <Text>TEST</Text>
     </View>
   );
