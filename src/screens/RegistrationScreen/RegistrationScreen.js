@@ -6,8 +6,8 @@ import { FormSubmitButton } from "../../components/FormSubmitButton";
 import { PasswordField } from "../../components/PasswordField";
 import { TextInputField } from "../../components/TextInputField";
 import { commonStyles } from "../../styles/common";
-// import Icon from "react-native-vector-icons/AntDesign";
-// import * as ImagePicker from "expo-image-picker";
+import Icon from "react-native-vector-icons/AntDesign";
+import * as ImagePicker from "expo-image-picker";
 
 export const RegistrationScreen = ({
   onInputFocus,
@@ -19,23 +19,23 @@ export const RegistrationScreen = ({
   const [password, setPassword] = useState("");
 
   //IMAGE PICKER
-  // const [image, setImage] = useState(null);
+  const [image, setImage] = useState(null);
 
-  // const pickImage = async () => {
-  //   // No permissions request is necessary for launching the image library
-  //   let result = await ImagePicker.launchImageLibraryAsync({
-  //     mediaTypes: ImagePicker.MediaTypeOptions.All,
-  //     allowsEditing: true,
-  //     aspect: [4, 3],
-  //     quality: 1,
-  //   });
+  const pickImage = async () => {
+    // No permissions request is necessary for launching the image library
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.All,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1,
+    });
 
-  //   console.log(result);
+    console.log(result);
 
-  //   if (!result.canceled) {
-  //     setImage(result.assets[0].uri);
-  //   }
-  // };
+    if (!result.canceled) {
+      setImage(result.assets[0].uri);
+    }
+  };
   //IMAGE PICKER
 
   const clearFields = () => {
@@ -59,7 +59,7 @@ export const RegistrationScreen = ({
         marginTop: isKeyboardOpen ? 43 : 219,
       }}
     >
-      {/* <View style={styles.imageBox}>
+      <View style={styles.imageBox}>
         {image && (
           <Image
             source={{ uri: image }}
@@ -88,7 +88,7 @@ export const RegistrationScreen = ({
             style={image && { transform: [{ rotate: "45deg" }] }}
           />
         </TouchableOpacity>
-      </View> */}
+      </View>
 
       <View style={commonStyles.formWrapper}>
         <Text style={commonStyles.title}>Регистрация</Text>
