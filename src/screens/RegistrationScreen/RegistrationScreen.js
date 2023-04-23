@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
-// import { EmailField } from "../../components/EmailField";
+import { EmailField } from "../../components/EmailField";
 // import { FormLogRegLink } from "../../components/FormLogRegLink";
 // import { FormSubmitButton } from "../../components/FormSubmitButton";
 // import { PasswordField } from "../../components/PasswordField";
@@ -101,11 +101,11 @@ export const RegistrationScreen = ({
             onChangeText={setLogin}
           />
 
-          {/* <EmailField
+          <EmailField
             value={email}
             onChangeText={setEmail}
             onFocus={onInputFocus}
-          /> */}
+          />
 
           {/* <PasswordField
             value={password}
